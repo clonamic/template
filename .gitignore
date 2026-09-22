@@ -13,8 +13,3 @@ id_ed25519*
 .vscode/
 *.swp
 *.log
-__pycache__/
-*.py[cod]
-.venv/
-venv/
-node_modules/
