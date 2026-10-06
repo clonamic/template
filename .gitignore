@@ -14,3 +14,7 @@ id_ed25519*
 *.swp
 *.log
 __pycache__/
+
+# tests stay local; they are not shipped
+tests/
+test/

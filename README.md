@@ -57,11 +57,10 @@
 | 개발명세서.md | clonamic-harness/skills/clonamic-spec/references/dev-spec.md |
 | 보고서.md | clonamic-harness/skills/clonamic-finish/references/report.md |
 
-원본을 고친 뒤 플러그인 저장소가 옆(`../plugin`)에 있으면 사본을 맞춘다. Python 3.12 이상, 표준 라이브러리만 쓴다.
+원본을 고친 뒤 플러그인 저장소가 옆(`../plugin`)에 있으면 사본을 그대로 복사해 맞춘다. 같은지는 `cmp`로 확인한다.
 
 ```bash
-python3 scripts/sync_to_plugin.py          # 사본을 원본과 같게 덮어쓴다
-python3 scripts/sync_to_plugin.py --check  # 다르면 목록을 보여 주고 1로 끝난다
+cmp 작업명세서.md ../plugin/clonamic-harness/skills/clonamic-spec/references/work-spec.md
+cmp 개발명세서.md ../plugin/clonamic-harness/skills/clonamic-spec/references/dev-spec.md
+cmp 보고서.md ../plugin/clonamic-harness/skills/clonamic-finish/references/report.md
 ```
-
-`../plugin`이 없으면 아무것도 하지 않고 0으로 끝난다. 다른 위치는 `--plugin <경로>`로 준다.
